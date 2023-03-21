@@ -89,4 +89,26 @@ final class sortingTests: XCTestCase {
         
         XCTAssertEqual(array, output)
     }
+    
+    func test_quicksort() {
+        var array = [Int]()
+        array.quicksort()
+        
+        XCTAssertEqual(array, [])
+        
+        array.append(19358)
+        array.quicksort()
+        XCTAssertEqual(array, [19358])
+        array.removeLast()
+        
+        var output = [Int](0 ..< 65536)
+        output += output
+        output.sort()
+        
+        array = (0 ..< 65536).shuffled()
+        array += array
+        array.quicksort()
+        
+        XCTAssertEqual(array, output)
+    }
 }
