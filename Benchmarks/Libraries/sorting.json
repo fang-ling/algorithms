@@ -1,0 +1,27 @@
+{
+    "kind": "group",
+    "title": "Sorting Benchmarks",
+    "directory": "Sorting",
+    "contents": [
+        {
+            "kind": "group",
+            "title": "Sorting Benchmarks",
+            "contents": [
+                {
+                    "kind": "chart",
+                    "title": "operations",
+                    "tasks": [
+                        "Array<Int> insertion_sort (sorted input)",
+                        "Array<Int> quicksort (sorted input)",
+                        "Array<Int> insertion_sort (random input)",
+                        "Array<Int> selection_sort (random input)",
+                        "Array<Int> bubble_sort (random input)",
+                        "Array<Int> merge_sort (random input)",
+                        "Array<Int> quicksort (random input)",
+                        "Array<Int> sort (random input)"
+                    ]
+                }
+            ]
+        }
+    ]
+}
