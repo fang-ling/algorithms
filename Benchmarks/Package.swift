@@ -7,7 +7,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/apple/swift-collections-benchmark",
                  from: "0.0.3"),
-        .package(url: "https://github.com/fang-ling/algorithms", from: "0.0.1")
+        .package(url: "https://github.com/fang-ling/algorithms", from: "0.0.2")
     ],
     targets: [
         .executableTarget(

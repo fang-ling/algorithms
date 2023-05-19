@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/fang-ling/algorithms",
       "state" : {
-        "revision" : "df461370f918d44a068bc52855bd829b3e0f506a",
-        "version" : "0.0.1"
+        "revision" : "e62a2f7836f599c3d72ba18763eb3282e2844dab",
+        "version" : "0.0.2"
       }
     },
     {
