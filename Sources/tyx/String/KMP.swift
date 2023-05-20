@@ -62,3 +62,28 @@ extension String {
         return result
     }
 }
+
+/* Notes: (To compute π array manually)
+ * Let π[i] be the longest proper prefix of pattern[0 ... i] which is also a
+ * suffix of pattern[0 ... i].
+ * (A proper prefix is a prefix with a whole string not allowed.)
+ *
+ * Example: for the pattern "ABAABC"
+ * i = 0: p-prefix: ø; suffix: ø   --> π[0 - 1] = 0 // Trivial case
+ * i = 1: p-prefix: ø; suffix: ø                        --> π[1 - 1] = 0
+ * i = 2: p-prefix: {A}; suffix: {B, AB}                --> π[2 - 1] = 0
+ * i = 3: p-prefix: {A, AB}; suffix: {A, BA, ABA}       --> π[3 - 1] = 1
+ * i = 4: p-prefix: {A, AB, ABA};
+ *          suffix: {A, AA, BAA, ABAA}                  --> π[4 - 1] = 1
+ * i = 5: p-prefix: {A, AB, ABA, ABAA};
+ *          suffix: {B, AB, AAB, BAAB, ABAAB}           --> π[5 - 1] = 2
+ * i = 6: p-prefix: {A, AB, ABA, ABAA, ABAAB};
+ *          suffix: {C, BC, ABC, AABC, BAABC, ABAABC}   --> π[6 - 1] = 0
+ *
+ * That is, π = [0, 0, 1, 1, 2, 0]. (Aka partial match array).
+ * Our program's π is every element decreased by one: [-1, -1, 0, 0, 1, -1].
+ * To get something call `next`, right shift π by one with π[0] = -1:
+ * next = [-1, 0, 0, 1, 1, 2].
+ * You may also add next by one:
+ * next' = [0, 1, 1, 2, 2, 3]
+ */
