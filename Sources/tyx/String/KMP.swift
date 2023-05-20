@@ -8,7 +8,7 @@
 import Foundation
 
 extension String {
-    @inlinable public func indicesOf(pattern : String) -> [Int] {
+    @inlinable public func indices_of(pattern : String) -> [Int] {
         if pattern.count > self.count || pattern.isEmpty {
             return []
         }

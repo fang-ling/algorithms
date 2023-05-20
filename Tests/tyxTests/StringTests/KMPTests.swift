@@ -16,10 +16,10 @@ final class KMPTests: XCTestCase {
     }
     
     func test_kmp() {
-        XCTAssertEqual("tobeornottobe".indicesOf(pattern: "to"), [0, 9])
-        XCTAssertEqual("".indicesOf(pattern: ""), [])
-        XCTAssertEqual("aaa".indicesOf(pattern: "b"), [])
-        XCTAssertEqual("Fang-Ling".indicesOf(pattern: "Fang-LingTzu-han"), [])
-        XCTAssertEqual("Ssu-yen".indicesOf(pattern: "Ssu-yen"), [0])
+        XCTAssertEqual("tobeornottobe".indices_of(pattern: "to"), [0, 9])
+        XCTAssertEqual("".indices_of(pattern: ""), [])
+        XCTAssertEqual("aaa".indices_of(pattern: "b"), [])
+        XCTAssertEqual("Fang-Ling".indices_of(pattern: "Fang-LingTzu-han"), [])
+        XCTAssertEqual("Ssu-yen".indices_of(pattern: "Ssu-yen"), [0])
     }
 }
