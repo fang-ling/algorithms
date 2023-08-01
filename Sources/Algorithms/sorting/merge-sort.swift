@@ -13,7 +13,7 @@ import Foundation
 /// - Complexity: O(*n*), where *n* is the number of elements being merged.
 private func merge<T : Comparable>(left : [T], right : [T]) -> [T] {
     var array = [T]()
-    
+
     var j = 0
     var k = 0
     while true {
@@ -28,7 +28,7 @@ private func merge<T : Comparable>(left : [T], right : [T]) -> [T] {
             k += 1
         }
     }
-    
+
     var i = j
     while i < left.count {
         array.append(left[i])
@@ -39,7 +39,7 @@ private func merge<T : Comparable>(left : [T], right : [T]) -> [T] {
         array.append(right[i])
         i += 1
     }
-    
+
     return array
 }
 
@@ -67,6 +67,6 @@ extension Array where Element : Comparable {
     ///
     /// - Complexity: O(*n* log *n*), where *n* is the length of the collection.
     public mutating func merge_sort() {
-        tyx.merge_sort(array: &self)
+        Algorithms.merge_sort(array: &self)
     }
 }

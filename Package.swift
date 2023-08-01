@@ -3,19 +3,26 @@
 import PackageDescription
 
 let package = Package(
-    name: "tyx",
-    products: [
-        .library(
-            name: "tyx",
-            targets: ["tyx"]),
-    ],
-    dependencies: [],
-    targets: [
-        .target(
-            name: "tyx",
-            dependencies: []),
-        .testTarget(
-            name: "tyxTests",
-            dependencies: ["tyx"]),
-    ]
+  name: "tyx",
+  products: [
+    .library(
+      name: "Algorithms",
+      targets: ["Algorithms"]
+    ),
+  ],
+  dependencies: [
+    .package(url: "https://github.com/fang-ling/collections", from: "0.0.4")
+  ],
+  targets: [
+    .target(
+      name: "Algorithms",
+      dependencies: [
+        .product(name: "Collections", package: "collections")
+      ]
+    ),
+    .testTarget(
+      name: "AlgorithmsTests",
+      dependencies: ["Algorithms"]
+    ),
+  ]
 )

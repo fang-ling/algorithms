@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fang-ling/collections",
+      "state" : {
+        "revision" : "ad20a2533ad18be3f799adbda6817292e1fefec0",
+        "version" : "0.0.4"
+      }
+    }
+  ],
+  "version" : 2
+}

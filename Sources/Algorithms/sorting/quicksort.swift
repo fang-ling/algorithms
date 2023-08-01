@@ -1,6 +1,6 @@
 //
 //  quicksort.swift
-//  
+//
 //
 //  Created by Fang Ling on 2023/3/21.
 //
@@ -58,6 +58,6 @@ extension Array where Element : Comparable {
     /// - Complexity: O(*n* log *n*) expected, where *n* is the length of the
     /// collection.
     public mutating func quicksort() {
-        tyx.quicksort(array: &self[...], 0, count - 1)
+        Algorithms.quicksort(array: &self[...], 0, count - 1)
     }
 }
