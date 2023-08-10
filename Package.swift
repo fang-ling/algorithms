@@ -11,7 +11,7 @@ let package = Package(
     ),
   ],
   dependencies: [
-    .package(url: "https://github.com/fang-ling/collections", from: "0.0.4")
+    .package(url: "https://github.com/fang-ling/collections", from: "0.0.6")
   ],
   targets: [
     .target(
