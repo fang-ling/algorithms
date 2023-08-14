@@ -10,7 +10,7 @@ import Collections
 
 extension AdjacencyEdge : Comparable {
     public static func < (lhs : AdjacencyEdge, rhs : AdjacencyEdge) -> Bool {
-        lhs.weight < rhs.weight
+        lhs.w < rhs.w
     }
 }
 
@@ -21,15 +21,15 @@ public func dijkstra(G : AdjacencyList, s : Int) -> [Int] {
     var π = [Int?](repeating: nil, count: G.count)
 
     var Q = BinaryHeap<AdjacencyEdge>()
-    Q.insert(AdjacencyEdge(v: s, weight: 0))
+    Q.insert(AdjacencyEdge(v: s, w: 0))
     d[s] = 0
     while !Q.is_empty {
         let u = Q.remove_max().v
         for e in G.adj[u] {
             let v = e.v
-            let w = e.weight
+            let w = e.w
             if relax(d: &d, π: &π, u: u, v: v, w: w) {
-                Q.insert(AdjacencyEdge(v: v, weight: w))
+                Q.insert(AdjacencyEdge(v: v, w: w))
             }
         }
     }

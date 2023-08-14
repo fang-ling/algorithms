@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/fang-ling/collections",
       "state" : {
-        "revision" : "ccc560cdedb6dfa7776a28bec345d71379d592df",
-        "version" : "0.0.6"
+        "revision" : "e7a6b23e2a70bfb16b31d05217c86f78584a7fcd",
+        "version" : "0.0.7"
       }
     }
   ],
